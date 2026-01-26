@@ -1,0 +1,190 @@
+/* Penguin Cursor Companion */
+.penguin-companion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    /* Increased size for 3D image */
+    height: 60px;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear;
+    /* Smooth movement handled by JS, but this helps valid renders */
+    will-change: transform, left, top;
+}
+
+.penguin-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: waddle 0.6s ease-in-out infinite both;
+    animation-play-state: paused;
+    /* Runs only when moving */
+}
+
+.penguin-companion.moving .penguin-body {
+    animation-play-state: running;
+}
+
+/* Image specific styling */
+.tux-3d-img {
+    display: block;
+    pointer-events: none;
+}
+
+/* Interaction States */
+.penguin-companion.clicking .penguin-body {
+    transform: scale(0.9) translateY(5px);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.penguin-companion.sliding {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Animations */
+@keyframes waddle {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-30px) scale(0.9, 1.1);
+    }
+}
+
+@keyframes backflip {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-180deg) translateY(-50px);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateY(0);
+    }
+}
+
+@keyframes sleep-breath {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05, 0.95);
+    }
+}
+
+/* Classes for JS toggling */
+.penguin-body.jumping {
+    animation: jump 0.5s ease-in-out;
+}
+
+.penguin-body.flipping {
+    animation: backflip 0.6s ease-in-out;
+}
+
+.penguin-companion.sleeping .penguin-body {
+    animation: sleep-breath 2s ease-in-out infinite;
+    filter: grayscale(0.3);
+}
+
+/* Speech Bubble */
+.penguin-speech {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    z-index: 10000;
+}
+
+.penguin-speech::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.penguin-speech.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Sleeping Zzz */
+.penguin-zzz {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 0;
+    font-family: monospace;
+}
+
+.penguin-companion.sleeping .penguin-zzz {
+    animation: float-zzz 2s infinite linear;
+}
+
+@keyframes float-zzz {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(1.2);
+    }
+}
+
+/* Hide on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .penguin-companion {
+        display: none;
+    }
+}

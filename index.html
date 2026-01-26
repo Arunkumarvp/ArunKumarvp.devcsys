@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Cyber-Tamer | Security Engineer & Software Developer</title>
+    <meta name="description"
+        content="Portfolio of a Linux systems expert specializing in cybersecurity, penetration testing, and distributed systems engineering.">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#FF005C" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FF005C" media="(prefers-color-scheme: light)">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png">
+
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cyber-Tamer">
+
+    <!-- Android/Chrome Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Cyber-Tamer">
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#03001C">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/modern-about.css">
+    <link rel="stylesheet" href="css/penguin.css">
+
+    <!-- Matter.js for Physics Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+
+<body>
+    <!-- Boot Sequence Overlay -->
+    <div id="boot-sequence" class="boot-overlay">
+        <div class="boot-content">
+            <pre id="boot-text" class="boot-text"></pre>
+            <div class="boot-progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Navigation (File Tree) -->
+        <aside class="sidebar" data-physics="true">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">File Explorer</span>
+            </div>
+            <nav class="file-tree">
+                <ul>
+                    <li class="directory">
+                        <span class="folder-icon">📁</span> /root/
+                        <ul>
+                            <li class="file active" data-target="about">
+                                <span class="file-icon">🐚</span> about_me.sh
+                            </li>
+                            <li class="file" data-target="experience">
+                                <span class="file-icon">💼</span> experience.log
+                            </li>
+                            <li class="file" data-target="education">
+                                <span class="file-icon">🎓</span> education.json
+                            </li>
+                            <li class="file" data-target="projects">
+                                <span class="file-icon">📂</span> projects/
+                            </li>
+                            <li class="file" data-target="security">
+                                <span class="file-icon">🔒</span> security_lab/
+                            </li>
+                            <li class="file" data-target="gravity">
+                                <span class="file-icon">💥</span> self_destruct.exe
+                            </li>
+                            <li class="file" data-target="contact">
+                                <span class="file-icon">📧</span> contact.txt
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-info">
+                    <p>User: cyber-tamer</p>
+                    <p>Host: portfolio.dev</p>
+                    <p id="uptime">Uptime: 00:00:00</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- About Me Section -->
+            <!-- About Me Section -->
+            <section id="about" class="content-section active">
+                <div class="modern-about-container">
+                    <!-- Left Content -->
+                    <div class="about-content">
+                        <h3 class="greeting-text">Hello, System Access Granted</h3>
+                        <h1 class="hero-name">Cyber-Tamer</h1>
+                        <h2 class="hero-role">And I'm a <span class="typing-role">Security Engineer</span></h2>
+
+                        <p class="hero-description">
+                            I specialize in taming chaotic systems and securing digital frontiers.
+                            My mission is to build robust, scalable solutions that stand the test of time and intrusion.
+                            <br><br>
+                            <span class="highlight-text">Penetration Testing • Distributed Systems • Linux
+                                Architecture</span>
+                        </p>
+
+                        <!-- Social Icons -->
+                        <div class="social-links">
+                            <a href="#" class="social-icon" aria-label="GitHub"><span class="icon">⌘</span></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><span class="icon">in</span></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><span class="icon">𝕏</span></a>
+                            <a href="#" class="social-icon" aria-label="Email"><span class="icon">@</span></a>
+                        </div>
+
+                        <!-- Glowing Button -->
+                        <a href="#" class="neon-button" data-physics="true">
+                            Download CV
+                            <div class="btn-glow"></div>
+                        </a>
+                    </div>
+
+                    <!-- Right Image/Avatar -->
+                    <div class="about-image-wrapper">
+                        <div class="glow-circle-bg"></div>
+                        <div class="profile-image-container terminal-window" data-physics="true">
+                            <div class="profile-placeholder">
+                                <span class="profile-emoji">👨‍💻</span>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Cards -->
+                        <div class="floating-badge badge-top" data-physics="true">
+                            <span class="badge-icon">🛡️</span>
+                            <div class="badge-text">
+                                <span class="badge-title">Security</span>
+                                <span class="badge-subtitle">Expert</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom" data-physics="true">
+                            <span class="badge-icon">⚡</span>
+                            <div class="badge-text">
+                                <span class="badge-title">System</span>
+                                <span class="badge-subtitle">Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section id="experience" class="content-section">
+                <h1 class="glitch" data-text="$ tail -f experience.log">$ tail -f experience.log</h1>
+
+                <div class="terminal-window" data-physics="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Work Experience Log</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="experience-timeline">
+
+                            <!-- Experience Entry 1 -->
+                            <div class="experience-entry" data-physics="true">
+                                <div class="exp-header">
+                                    <h3 class="job-title"><span class="ct-pink">█</span> Senior Security Engineer</h3>
+                                    <span class="company-name">CyberShield Technologies</span>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="date-range">Jan 2023 - Present</span>
+                                    <span class="location">Remote, USA</span>
+                                </div>
+                                <div class="exp-description">
+                                    <ul class="achievements">
+                                        <li><span class="ct-pink">▸</span> Led penetration testing operations for
+                                            Fortune 500 clients, identifying and mitigating critical vulnerabilities
+                                        </li>
+                                        <li><span class="ct-pink">▸</span> Developed automated security testing
+                                            framework reducing assessment time by 60%</li>
+                                        <li><span class="ct-pink">▸</span> Implemented zero-trust architecture for
+                                            enterprise cloud infrastructure</li>
+                                        <li><span class="ct-pink">▸</span> Conducted security training for development
+                                            teams, improving secure coding practices</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Kali Linux</span>
+                                        <span class="tech-tag">Burp Suite</span>
+                                        <span class="tech-tag">AWS Security</span>
+                                        <span class="tech-tag">OWASP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Entry 2 -->
+                            <div class="experience-entry" data-physics="true">
+                                <div class="exp-header">
+                                    <h3 class="job-title"><span class="ct-pink">█</span> Full Stack Security Developer
+                                    </h3>
+                                    <span class="company-name">SecureCode Inc.</span>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="date-range">Mar 2021 - Dec 2022</span>
+                                    <span class="location">San Francisco, CA</span>
+                                </div>
+                                <div class="exp-description">
+                                    <ul class="achievements">
+                                        <li><span class="ct-pink">▸</span> Built distributed security monitoring
+                                            platform processing 10M+ events/day</li>
+                                        <li><span class="ct-pink">▸</span> Designed and implemented real-time threat
+                                            detection using machine learning</li>
+                                        <li><span class="ct-pink">▸</span> Reduced false positive rate by 75% through
+                                            algorithm optimization</li>
+                                        <li><span class="ct-pink">▸</span> Collaborated with DevOps to integrate
+                                            security into CI/CD pipeline</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Go</span>
+                                        <span class="tech-tag">Kubernetes</span>
+                                        <span class="tech-tag">Redis</span>
+                                        <span class="tech-tag">ELK Stack</span>
+                                        <span class="tech-tag">Docker</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Entry 3 -->
+                            <div class="experience-entry" data-physics="true">
+                                <div class="exp-header">
+                                    <h3 class="job-title"><span class="ct-pink">█</span> Junior Security Analyst</h3>
+                                    <span class="company-name">DataGuard Solutions</span>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="date-range">Jun 2019 - Feb 2021</span>
+                                    <span class="location">Boston, MA</span>
+                                </div>
+                                <div class="exp-description">
+                                    <ul class="achievements">
+                                        <li><span class="ct-pink">▸</span> Performed vulnerability assessments and
+                                            security audits for client applications</li>
+                                        <li><span class="ct-pink">▸</span> Developed Python scripts for automated
+                                            security scanning and reporting</li>
+                                        <li><span class="ct-pink">▸</span> Assisted in incident response and forensic
+                                            analysis for security breaches</li>
+                                        <li><span class="ct-pink">▸</span> Maintained and updated security documentation
+                                            and compliance reports</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Nmap</span>
+                                        <span class="tech-tag">Wireshark</span>
+                                        <span class="tech-tag">Metasploit</span>
+                                        <span class="tech-tag">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="content-section">
+                <h1 class="glitch" data-text="$ cat education.json">$ cat education.json</h1>
+
+                <div class="terminal-window" data-physics="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Academic Credentials</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="json-output"><code>{
+  <span class="keyword">"education"</span>: [
+    {
+      <span class="keyword">"degree"</span>: <span class="string">"Master of Science in Cybersecurity"</span>,
+      <span class="keyword">"institution"</span>: <span class="string">"Massachusetts Institute of Technology"</span>,
+      <span class="keyword">"location"</span>: <span class="string">"Cambridge, MA"</span>,
+      <span class="keyword">"graduation"</span>: <span class="string">"May 2021"</span>,
+      <span class="keyword">"gpa"</span>: <span class="number">3.9</span>,
+      <span class="keyword">"honors"</span>: <span class="string">"Summa Cum Laude"</span>,
+      <span class="keyword">"focus"</span>: [
+        <span class="string">"Network Security"</span>,
+        <span class="string">"Cryptography"</span>,
+        <span class="string">"Malware Analysis"</span>,
+        <span class="string">"Secure Software Development"</span>
+      ],
+      <span class="keyword">"thesis"</span>: <span class="string">"Advanced Persistent Threat Detection using ML"</span>
+    },
+    {
+      <span class="keyword">"degree"</span>: <span class="string">"Bachelor of Science in Computer Science"</span>,
+      <span class="keyword">"institution"</span>: <span class="string">"University of California, Berkeley"</span>,
+      <span class="keyword">"location"</span>: <span class="string">"Berkeley, CA"</span>,
+      <span class="keyword">"graduation"</span>: <span class="string">"May 2019"</span>,
+      <span class="keyword">"gpa"</span>: <span class="number">3.85</span>,
+      <span class="keyword">"honors"</span>: <span class="string">"Magna Cum Laude"</span>,
+      <span class="keyword">"focus"</span>: [
+        <span class="string">"Algorithms & Data Structures"</span>,
+        <span class="string">"Operating Systems"</span>,
+        <span class="string">"Computer Networks"</span>,
+        <span class="string">"Database Systems"</span>
+      ]
+    }
+  ],
+  <span class="keyword">"certifications"</span>: [
+    {
+      <span class="keyword">"name"</span>: <span class="string">"Offensive Security Certified Professional (OSCP)"</span>,
+      <span class="keyword">"issuer"</span>: <span class="string">"Offensive Security"</span>,
+      <span class="keyword">"issued"</span>: <span class="string">"2022"</span>,
+      <span class="keyword">"credential_id"</span>: <span class="string">"OS-12345"</span>,
+      <span class="keyword">"status"</span>: <span class="ct-pink">"✓ Active"</span>
+    },
+    {
+      <span class="keyword">"name"</span>: <span class="string">"Certified Ethical Hacker (CEH)"</span>,
+      <span class="keyword">"issuer"</span>: <span class="string">"EC-Council"</span>,
+      <span class="keyword">"issued"</span>: <span class="string">"2021"</span>,
+      <span class="keyword">"credential_id"</span>: <span class="string">"ECC-67890"</span>,
+      <span class="keyword">"status"</span>: <span class="ct-pink">"✓ Active"</span>
+    },
+    {
+      <span class="keyword">"name"</span>: <span class="string">"AWS Certified Security - Specialty"</span>,
+      <span class="keyword">"issuer"</span>: <span class="string">"Amazon Web Services"</span>,
+      <span class="keyword">"issued"</span>: <span class="string">"2023"</span>,
+      <span class="keyword">"credential_id"</span>: <span class="string">"AWS-SEC-24680"</span>,
+      <span class="keyword">"status"</span>: <span class="ct-pink">"✓ Active"</span>
+    },
+    {
+      <span class="keyword">"name"</span>: <span class="string">"Certified Kubernetes Security Specialist (CKS)"</span>,
+      <span class="keyword">"issuer"</span>: <span class="string">"Cloud Native Computing Foundation"</span>,
+      <span class="keyword">"issued"</span>: <span class="string">"2023"</span>,
+      <span class="keyword">"credential_id"</span>: <span class="string">"CNCF-CKS-13579"</span>,
+      <span class="keyword">"status"</span>: <span class="ct-pink">"✓ Active"</span>
+    }
+  ],
+  <span class="keyword">"achievements"</span>: [
+    <span class="string">"🏆 Winner - MIT Cybersecurity Capture The Flag 2020"</span>,
+    <span class="string">"🏆 Dean's List - All 4 undergraduate years"</span>,
+    <span class="string">"📚 Published 3 security research papers"</span>,
+    <span class="string">"🎤 Speaker at DEF CON 30 (2022)"</span>
+  ]
+}
+</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+
+            <section id="projects" class="content-section">
+                <h1 class="glitch" data-text="$ ls -la projects/">$ ls -la projects/</h1>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-physics="true">
+                        <div class="card-header">
+                            <span class="ct-pink">█</span> Project Alpha
+                        </div>
+                        <div class="card-body">
+                            <p class="description">Distributed security monitoring system with real-time threat
+                                detection and automated response capabilities.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="link">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-physics="true">
+                        <div class="card-header">
+                            <span class="ct-pink">█</span> Network Scanner Pro
+                        </div>
+                        <div class="card-body">
+                            <p class="description">Advanced network vulnerability scanner with automated exploitation
+                                framework and detailed reporting.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Nmap</span>
+                                <span class="tech-tag">Metasploit</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="link">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-physics="true">
+                        <div class="card-header">
+                            <span class="ct-pink">█</span> AutoPatch System
+                        </div>
+                        <div class="card-body">
+                            <p class="description">Automated patch management and deployment system for enterprise Linux
+                                environments.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Bash</span>
+                                <span class="tech-tag">Ansible</span>
+                                <span class="tech-tag">CI/CD</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="link">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-physics="true">
+                        <div class="card-header">
+                            <span class="ct-pink">█</span> Encryption Suite
+                        </div>
+                        <div class="card-body">
+                            <p class="description">Modern cryptographic library implementing state-of-the-art encryption
+                                algorithms with zero-knowledge proofs.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Rust</span>
+                                <span class="tech-tag">Cryptography</span>
+                                <span class="tech-tag">ZK-SNARKs</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="link">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Lab Section -->
+            <section id="security" class="content-section">
+                <h1 class="glitch" data-text="$ cat incident_log.txt">$ cat incident_log.txt</h1>
+
+                <div class="terminal-window" data-physics="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Security Lab - Incident Log</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="incident-log">
+                            <div class="log-entry">
+                                <span class="timestamp">[2025-12-15 03:42:17]</span>
+                                <span class="status success">[PATCH]</span>
+                                <span class="message">SQL Injection vulnerability patched in legacy authentication
+                                    system</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">[2025-11-28 14:23:09]</span>
+                                <span class="status critical">[INFILTRATION]</span>
+                                <span class="message">Penetration test: Gained root access via privilege escalation
+                                    (CVE-2025-XXXX)</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">[2025-11-12 09:15:44]</span>
+                                <span class="status success">[HARDENING]</span>
+                                <span class="message">Implemented zero-trust architecture for microservices mesh</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">[2025-10-30 22:07:33]</span>
+                                <span class="status warning">[EXPLOIT]</span>
+                                <span class="message">Discovered buffer overflow in third-party library - CVE
+                                    submitted</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">[2025-10-15 11:52:18]</span>
+                                <span class="status success">[AUTOMATION]</span>
+                                <span class="message">Deployed automated threat detection with ML-based anomaly
+                                    detection</span>
+                            </div>
+                        </div>
+
+                        <div class="code-snippet">
+                            <p class="comment">// Example: Secure Authentication Implementation</p>
+                            <pre><code><span class="keyword">function</span> <span class="function">authenticateUser</span>(credentials) {
+  <span class="keyword">const</span> hash = <span class="function">bcrypt</span>.<span class="function">hashSync</span>(credentials.password, <span class="number">12</span>);
+  <span class="keyword">const</span> token = <span class="function">jwt</span>.<span class="function">sign</span>({ userId: user.id }, process.env.SECRET, {
+    expiresIn: <span class="string">'1h'</span>,
+    algorithm: <span class="string">'RS256'</span>
+  });
+  <span class="keyword">return</span> { success: <span class="keyword">true</span>, token };
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Self-Destruct System Section -->
+            <section id="gravity" class="content-section">
+                <h1 class="glitch" data-text="$ ./self_destruct.exe">$ ./self_destruct.exe</h1>
+
+                <div class="gravity-info terminal-window" data-physics="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Self-Destruct Automation System</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="output">
+                            <span class="ct-pink">💥 SELF-DESTRUCT SYSTEM v2.0</span><br><br>
+
+                            <span class="keyword">Status:</span> <span id="gravity-status"
+                                class="status-text">Standby</span><br>
+                            <span class="keyword">Countdown:</span> 10 seconds<br>
+                            <span class="keyword">Protocol:</span> Confirmation required<br><br>
+
+                            <span class="comment"># WARNING: This system demonstrates controlled destruction</span><br>
+                            <span class="comment"># and automated rebuild sequencing.</span><br><br>
+
+                            <span class="comment"># Activation sequence:</span><br>
+                            <span class="comment"># 1. Toggle switch or type "sudo destruct"</span><br>
+                            <span class="comment"># 2. Confirm with "sudo confirm"</span><br>
+                            <span class="comment"># 3. Watch the dramatic countdown</span><br>
+                            <span class="comment"># 4. Type "sudo abort" to cancel</span><br><br>
+
+                            <span class="status critical">⚠️ CAUTION: All UI elements will explode and
+                                rebuild!</span><br><br>
+
+                            <span class="string">✨ Toggle the switch in the status bar to initiate!</span>
+                        </p>
+
+                        <div class="heatmap-container">
+                            <h3>Coding Activity Heatmap</h3>
+                            <div id="commit-heatmap" class="heatmap-grid"></div>
+                            <div class="heatmap-legend">
+                                <span>Less</span>
+                                <div class="legend-colors">
+                                    <span class="legend-box level-0"></span>
+                                    <span class="legend-box level-1"></span>
+                                    <span class="legend-box level-2"></span>
+                                    <span class="legend-box level-3"></span>
+                                    <span class="legend-box level-4"></span>
+                                </div>
+                                <span>More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="content-section">
+                <h1 class="glitch" data-text="$ cat contact.txt">$ cat contact.txt</h1>
+
+                <div class="terminal-window" data-physics="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Contact Information</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="contact-info">
+                            <p class="output">
+                                <span class="ct-pink">$ grep -r "contact" /root/</span><br><br>
+
+                                <span class="keyword">Email:</span> <a href="mailto:cyber.tamer@example.com"
+                                    class="link">cyber.tamer@example.com</a><br>
+                                <span class="keyword">GitHub:</span> <a href="https://github.com/cybertamer"
+                                    class="link" target="_blank">github.com/cybertamer</a><br>
+                                <span class="keyword">LinkedIn:</span> <a href="https://linkedin.com/in/cybertamer"
+                                    class="link" target="_blank">linkedin.com/in/cybertamer</a><br>
+                                <span class="keyword">Twitter:</span> <a href="https://twitter.com/cybertamer"
+                                    class="link" target="_blank">@cybertamer</a><br><br>
+
+                                <span class="keyword">PGP Key:</span> <span class="mono">4A8B 9C2D 1E3F 5G6H
+                                    7I8J</span><br>
+                                <span class="keyword">Location:</span> Remote / Global<br>
+                                <span class="keyword">Timezone:</span> UTC-5 (EST)<br><br>
+
+                                <span class="comment"># Security Notice:</span><br>
+                                <span class="comment"># Encrypted communications preferred.</span><br>
+                                <span class="comment"># PGP public key available on request.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Status Bar -->
+    <footer class="status-bar">
+        <div class="status-left">
+            <span class="status-item">
+                <span class="ct-pink">●</span> ONLINE
+            </span>
+            <span class="status-item" id="current-section">
+                /root/about_me.sh
+            </span>
+        </div>
+        <div class="status-right">
+            <span class="status-item">
+                <span id="destruct-status" class="status-text">Standby</span>
+            </span>
+            <span class="status-item">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="destruct-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Self-Destruct</span>
+            </span>
+        </div>
+    </footer>
+
+    <!-- Command Terminal -->
+    <div class="command-terminal" id="command-terminal">
+        <button class="terminal-toggle" id="terminal-toggle" aria-label="Toggle terminal">
+            <span class="arrow-icon">▼</span>
+        </button>
+        <div class="terminal-input-container">
+            <span class="prompt-symbol">cyber-tamer@portfolio:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="type 'sudo help' for commands..."
+                autocomplete="off">
+        </div>
+        <div id="terminal-output" class="terminal-output hidden"></div>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/boot-sequence.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/self-destruct.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/terminal-collapse.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/heatmap.js"></script>
+    <script src="js/penguin-cursor.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        // console.log('✓ ServiceWorker registered:', registration.scope);
+
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    if (window.terminal) {
+                                        terminal.addOutput('<span class="ct-pink">🔄 New update available!</span>');
+                                        terminal.addOutput('<span class="comment"># Refresh to update</span>');
+                                        terminal.output.classList.remove('hidden');
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        // console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+
+            // Handle offline/online events
+            window.addEventListener('offline', () => {
+                if (window.terminal) {
+                    terminal.addOutput('<span class="status warning">⚠️ Offline mode</span>');
+                    terminal.addOutput('<span class="comment"># Cached resources available</span>');
+                    terminal.output.classList.remove('hidden');
+                }
+            });
+
+            window.addEventListener('online', () => {
+                if (window.terminal) {
+                    terminal.addOutput('<span class="ct-pink">✓ Back online</span>');
+                    terminal.output.classList.remove('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
