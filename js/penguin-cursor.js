@@ -89,7 +89,7 @@ const penguinCursor = {
             <div class="penguin-zzz">Zzz</div>
             <div class="penguin-body">
                 <!-- User Provided 3D Penguin -->
-                <img src="/home/dev/.gemini/antigravity/brain/9324d398-65cb-46a2-a6e8-9ebbfe75defb/uploaded_media_1769452743389.png" 
+                <img src="https://ik.imagekit.io/qbkraoafhm32/Arunkumar_portfolio/image-removebg-preview_2zIDmHV7Q.png" 
                      alt="Cute 3D Penguin" 
                      class="tux-3d-img"
                      style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));">
